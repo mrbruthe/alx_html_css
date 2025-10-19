@@ -1,0 +1,269 @@
+/* RESET & VARIABLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #FF6565;
+  --text-color: white;
+  --font-family: 'Source Sans Pro', sans-serif;
+  --max-width: 1000px;
+}
+
+/* GLOBAL STYLES */
+body {
+  font-family: var(--font-family);
+  background-color: black;
+  color: var(--text-color);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+}
+
+.logo {
+  height: 30px;
+}
+
+.main-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+  color: var(--main-color);
+}
+
+/* HERO SECTION */
+.hero {
+  background-image: url("images/headphones_hero_1.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.hero button:hover,
+.hero button:active {
+  opacity: 0.9;
+}
+
+/* WHAT WE DO SECTION */
+.what-we-do {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+  color: black;
+}
+
+.what-we-do h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.feature {
+  padding: 20px;
+}
+
+.feature .icon {
+  font-size: 40px;
+  color: var(--main-color);
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* OUR RESULTS SECTION */
+.our-results {
+  background-color: #f2f2f2;
+  color: black;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.result {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.pentagon {
+  position: relative;
+  width: 0;
+  border-style: solid;
+  border-width: 0 50px 86.6px 50px;
+  border-color: transparent transparent var(--main-color) transparent;
+  height: 0;
+  margin: 0 auto 10px;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 86.6px;
+}
+
+.pentagon::before {
+  content: "";
+  position: absolute;
+  top: -54px;
+  left: -50px;
+  width: 0;
+  border-style: solid;
+  border-width: 54px 50px 0 50px;
+  border-color: var(--main-color) transparent transparent transparent;
+}
+
+/* CONTACT */
+.contact {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 30px auto 0;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.contact-form button:hover,
+.contact-form button:active {
+  opacity: 0.9;
+}
+
+/* FOOTER */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+}
+
+.footer-logo {
+  height: 30px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--main-color);
+}
+
+.footer-text {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 480px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav {
+    margin-top: 10px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .results {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
