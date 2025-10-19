@@ -1,0 +1,120 @@
+/* ================================
+   RESET STYLES AND VARIABLES
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #FF6565;
+  --text-color: white;
+  --font-family: 'Source Sans Pro', sans-serif;
+  --max-width: 1000px;
+}
+
+/* ================================
+   GLOBAL STYLES
+================================ */
+body {
+  font-family: var(--font-family);
+  background-color: black;
+  color: var(--text-color);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* ================================
+   HEADER
+================================ */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+}
+
+.logo {
+  height: 30px;
+}
+
+.main-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+  color: var(--main-color);
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero {
+  background-image: url("images/headphones_hero_1.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.hero button:hover,
+.hero button:active {
+  opacity: 0.9;
+}
+
+/* ================================
+   RESPONSIVE: MOBILE (<= 480px)
+================================ */
+@media screen and (max-width: 480px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-nav {
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
